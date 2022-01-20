@@ -66,6 +66,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 4200,
+            "browserTarget": "angular-health-patient-message-ui:build",
+            "proxyConfig": "proxy.conf.js"
+          },
           "configurations": {
             "production": {
               "browserTarget": "angular-health-patient-message-ui:build:production"
