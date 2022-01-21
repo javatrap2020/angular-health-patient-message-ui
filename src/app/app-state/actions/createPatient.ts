@@ -4,7 +4,7 @@ import {Patient} from "../models";
 
 export const CREATE_PATIENT = '[CREATE PATIENT] Create Patient API';
 export const CREATE_PATIENT_SUCCESS = '[CREATE PATIENT] Create Patient API Success';
-export const CREATE_PATIENT_FAILURE = '[CREATE PATIENT] Create Patient API Failure';
+export const CREATE_PATIENT_FAILURE = '[CREATE PATIENT] Create Patient API Success';
 
 export const createPatient = createAction(
   CREATE_PATIENT,

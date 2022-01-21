@@ -1,9 +1,9 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {API_URL, PATIENT_URL, PATIENTS_URL, PROVIDE} from "./utils/constants";
+import {API_URL, PATIENT_URL, PATIENTS_URL} from "./utils/constants";
 
 @Injectable({
-  providedIn: PROVIDE
+  providedIn: "root"
 })
 
 export class AppService {

@@ -1,4 +1,4 @@
-import * as createPatientActions from '../actions/createdPatient'
+import * as createPatientActions from '../actions/createPatient'
 
 // @ts-ignore
 import {Action, createReducer, on} from "@ngrx/store";

@@ -20,6 +20,12 @@
             <input type="text" class="form-control" formControlName="email" id="exampleInputEmail" placeholder="Email">
           </div>
         </div>
+        <div class="row">
+          <div class="form-group col-md-13">
+            <label for="exampleInputEmail">Message</label>
+            <input type="text" class="form-control" formControlName="message" id="exampleInputMessage" placeholder="Message">
+          </div>
+        </div>
         <button type="submit" [disabled]="!patientForm.valid" class="btn btn-danger">Create</button>
       </form>
     </div>

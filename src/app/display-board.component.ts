@@ -1,4 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
+import {ActivatedRoute, Router} from "@angular/router";
+import {PATIENT_URL, SLASH} from "./utils/constants";
 
 @Component({
   selector: 'app-display-board',
@@ -7,7 +9,8 @@ import {Component, EventEmitter, Input, OnInit, Output} from "@angular/core";
 })
 
 export class DisplayBoardComponent implements OnInit {
-  constructor() {
+
+  constructor(private router:Router, private route:ActivatedRoute ) {
   }
 
   @Input() patientCount = 0;
@@ -18,5 +21,14 @@ export class DisplayBoardComponent implements OnInit {
 
   getAllPatients() {
     this.getPatientsEvent.emit('get all users');
+  }
+
+  reloadCurrentPage() {
+    if (this.router && this.router.url === SLASH) {
+      PATIENT_URL
+      window.location.reload();
+    } else {
+      this.router.navigate([PATIENT_URL]);
+    }
   }
 }
